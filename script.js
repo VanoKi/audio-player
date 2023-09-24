@@ -22,3 +22,15 @@ function loadSong(song) {
 }
 
 loadSong(songs[songIndex])
+
+function playSong() {
+  audio.play()
+}
+
+function pauseSong() {
+  audio.pause()
+}
+
+playBtn.addEventListener('click', () => {
+  playSong()
+})
