@@ -8,14 +8,17 @@ const player = document.querySelector('.main_container'),
       cover = document.querySelector('.cover'),
       backgr = document.querySelector('.background'),
       title = document.querySelector('.song-title')
+      artist = document.querySelector('.song-artist')
 
 
-const songs = ['beyonce', 'dontstartnow']
-
+const songs = ['beyonce', 'dontstartnow'],
+      dict = {'beyonce' : ['Beyonce', 'Don`t Hurt Yourself'], 
+              'dontstartnow': ['Dua Lipa','Don`t start now']}  
 let songIndex = 0
 
 function loadSong(song) {
-  title.innerHTML = song
+  title.innerHTML = dict[song][1]
+  artist.innerHTML = dict[song][0]
   audio.src = `assets/audio/${song}.mp3`
   cover.src = `assets/img/${songIndex}.png`
   backgr.src = `assets/img/${songIndex}.png`
