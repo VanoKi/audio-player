@@ -25,11 +25,13 @@ loadSong(songs[songIndex])
 
 function playSong() {
   player.classList.add('play')
+  playBtn.src = 'assets/svg/pause.png'
   audio.play()
 }
 
 function pauseSong() {
   player.classList.remove('play')
+  playBtn.src = 'assets/svg/play.png'
   audio.pause()
 }
 
@@ -41,3 +43,25 @@ playBtn.addEventListener('click', () => {
     playSong()
   }
 })
+
+function nextSong(){
+  songIndex++
+  if (songIndex > songs.length - 1) {
+    songIndex = 0
+  }
+  loadSong(songs[songIndex])
+  playSong()
+}
+
+nextBtn.addEventListener('click', nextSong)
+
+function prevSong(){
+  songIndex--
+  if (songIndex > 0) {
+    songIndex = songs.length - 1
+  }
+  loadSong(songs[songIndex])
+  playSong()
+}
+
+prevBtn.addEventListener('click', prevSong)
