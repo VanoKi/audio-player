@@ -73,10 +73,10 @@
   z-index: 4;
   height: 5px;
   background: #000;
-  width: 160pt;
-  bottom: 24%;
+  width: 200pt;
+  bottom: 27%;
   border-radius: 30px;
-  left: 17%;
+  left: 10%;
 }
 
 .play-pause {
@@ -89,7 +89,7 @@
   font-size: 53px;
   transition: .3s;
   bottom: 8%;
-  left: 44%;
+  left: 43%;
 }
 
 .previous {

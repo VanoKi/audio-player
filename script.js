@@ -68,3 +68,4 @@ function prevSong(){
 }
 
 prevBtn.addEventListener('click', prevSong)
+
