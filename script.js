@@ -24,13 +24,20 @@ function loadSong(song) {
 loadSong(songs[songIndex])
 
 function playSong() {
+  player.classList.add('play')
   audio.play()
 }
 
 function pauseSong() {
+  player.classList.remove('play')
   audio.pause()
 }
 
 playBtn.addEventListener('click', () => {
-  playSong()
+  const isPlay = player.classList.contains('play')
+  if (isPlay) {
+    pauseSong()
+  } else {
+    playSong()
+  }
 })
