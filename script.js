@@ -21,7 +21,7 @@ function loadSong(song) {
   artist.innerHTML = dict[song][0]
   audio.src = `assets/audio/${song}.mp3`
   cover.src = `assets/img/${songIndex}.png`
-  backgr.src = `assets/img/${songIndex}.png`
+  // backgr.src = `assets/img/${songIndex}.png`
 }
 
 loadSong(songs[songIndex])
